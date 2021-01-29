@@ -18,15 +18,12 @@ for data source publishing & connection.
 ```
 (https://github.com/rainmankim/tableau_server_cloudera_data_extraction)
 
-
-
-<http://www.example.com>
-In this reposito
-
 ```
-
-
 This repository will show you the following in the following order:
+- (1) 
+
+
+
 - (1) Connect Tableau Desktop with Cloudera Hadoop Server
 - (2) Extract necessary data (with custom SQL if necessary)
 - (3) Publish data source onto "Ray's Tableau Server" with emedded authetification as LIVE data source
