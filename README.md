@@ -1,55 +1,83 @@
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105825928-1e9d7e00-5ffb-11eb-991a-097e7aa9130e.jpg" alt="Kakao Team">
-
-# 파이썬으로 카카오톡 자동화시키기
+<img align="left" src="https://user-images.githubusercontent.com/62319355/105784986-d6f40380-5fb4-11eb-95e9-2261360d0120.jpg" width="220" height="80" alt="Tableau Server">
+<img align="right" src="https://user-images.githubusercontent.com/62319355/105791113-6eab1f00-5fc0-11eb-938c-58db40f72c20.png" width="150" height="80" alt="Cloudera logo">
 :smile: :grinning: :sleepy: :relieved: :confused: :open_mouth: :astonished: :thumbsup:
 
 
-```
-안녕하세요 rainmankim 입니다.
-자세한 사항은 ipynb 파일을 참조해주세요.
-의견이나 피드백이 있으시다면 rainmankim@gmail.com 으로 메일 부탁드리겠습니다 ^^
+# tableau_server_cloudera_data_extraction
 
-다수의 대상에게 메세지를 보내려면 굉장히 번거롭죠?
-API 를 활용할 수도 있겠지만 API를 활용하는 것은 더 복잡합니다.
-이번에는 파이썬 pyautogui 를 활용해서 쉽게 카카오톡 메세지 보내기를 자동화 해보겠습니다.
-```
-
-
-## 이번 강의에서는 총 여섯가지의 function을 이용하여서 자동화해보겠습니다.
-```
-kill_kakao()  # 카카오톡 종료
-open_kakao()  # 카카오톡 실행
-login_kakao() # 카카오톡 로그인
-find_fren(fren) # 카카오톡 친구(들) 찾기
-send_message(message) # 메세지 보내기
-auto_send(target, message) # 그리고 최종 메인 function입니다.
-```
-
-## 강의에 앞서서 자동화 원리를 설명해드리겠습니다.
-```
-Pyautogui 와 opencv 를 위주로 자동화가 되는데요.
-여러분의 눈이 카카오톡 UI를 보고 클릭하듯이
-아래 코드는 0.9의 정확도로 login_password 이미지와 매칭하는 픽셀위치를 찾습니다.
-
-button_location = pyautogui.locateOnScreen('images/login_login.png', confidence=0.9)  
-
-if button_location is None and button_location_2 is None:
-    print("패스워드 버튼 찾기 실패 ㅠㅠ")
-elif button_location is not None:
-    button_point = pyautogui.center(button_location)
-    pyautogui.click(button_point.x, button_point.y)  # 그 다음은 이렇게 클릭해주고
-    pyautogui.write('Hello World')  # 텍스트를 입력해주면 됩니다.
 
 ```
+Creator: Ray Kim Dong Hyun
+Contact: rainmankim@gmail.com
 
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105826059-4987d200-5ffb-11eb-8724-0eb35fb0eac9.png" alt="Kakao Login">
+* For easier understanding, I am going to call Tableau Server "Ray's Tableau Server".
 
-### 흐려서 잘 안보이지만 아래 이미지 비슷한 픽셀을 찾는 겁니다.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105826183-6ae8be00-5ffb-11eb-8089-bb177772ae8e.png" alt="Login ">
+This repository will show you the following in the following order:
+- (1) Connect Tableau Desktop with Cloudera Hadoop Server
+- (2) Extract necessary data (with custom SQL if necessary)
+- (3) Publish data source onto "Ray's Tableau Server" with emedded authetification as LIVE data source
+- (4) From "Ray's Tabealu Server", change the data from LIVE to EXTRACT  (takes a while)
+- (5) Open a new Tableau Desktop instance and connect to the publisehd data source in "Ray's Tableau Server"
+- (6-optional) Set refresch schedule for extracted data
+```
+
+
+### Step 1.  Let's open up Tableau Desktop and connect to Cloudera Hadoop with your credentials
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105792845-10337000-5fc3-11eb-9fd8-43d35e496f13.png" alt="tableau_cloudera_connection image">
+
+### Step 2. Next, connect to Cloudera Table.  And I have written custom SQL query because the DB is too big(You can extract the DB as a whole)
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105798924-3d395000-5fce-11eb-99e2-7ab2811a9fd9.png" alt="tableau_cloudera_connection image">
+
+### Step 3. Next, we shall now publish the databse onto "Ray's Tableau Server"
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105799297-29dab480-5fcf-11eb-878d-a751ae42211c.png" alt="tableau_cloudera_connection image">
+
+
+### I recommend publishing this with "Embedded Password" setting with Live connection (because it often fails when you try to extract first)
+#### If you choose "prompt user", it will ask for your password every single time. 
+#### Alternatively, you can choose to publish as "prompt user" and you can still change to "Embedded Password" in "Ray's Tableau Server".
+#### I will show you in step 4
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105804723-788e4b80-5fdb-11eb-89b2-135c378efbd0.png">
+
+
+### Step 4A. Now let us go to "Ray's Tableau Server".  
+#### Search for the published data soruce. 
+#### If you had published as "Prompt User", you can change to "Embedded Password" authetification instead.
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105806935-e3418600-5fdf-11eb-9379-6b47a65da4e5.png" alt="tableau_edit_connection"
+
+
+### Step 4B.  Change the data connection from LIVE to EXTRACT  (takes a while)
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105820676-d4b19980-5ff4-11eb-9b60-ce1b78c4d3dc.png" alt="Live to extract">
+
+#### Once you click "Extract", "Ray's Tableau Server" will start to extract from Cloudera Database.
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105821234-910b5f80-5ff5-11eb-912c-8cfb388d7023.png" alt="Live to extract">
+
+#### You will receive an email upton extraction (at least that is how it is configured).
+#### In addition, you can monitor the extraction process in real-time as shown.
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105821830-3fafa000-5ff6-11eb-897a-a0ceb4298d8e.png" alt="Live to extract">
+
+
+
+### Step 5. Once data source has been extracted on the Tableau, let us connect to the data.
+#### Now, you will experience much less loading of data as compared to live connection.
+#### You may ask "Why not just extract from the very start?"  The biggest reason is that it can throw an error when you extract at the start.
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105823826-9918ce80-5ff8-11eb-8d7c-fcbd4e1f97ab.png" alt="Connect to ray DB">
+
+
+### Step 6. (Optional) You can set refresh schedule on the Extract on "Ray's Tableau Server" easily.
+<img align="center" src="https://user-images.githubusercontent.com/62319355/105824522-6e7b4580-5ff9-11eb-95fd-55e75066650d.png" alt="Refresh Extracts">
+
+
+
+🎈🦾 😎 That's it from me.  Happy Data Stitching!!
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
 ## Credits
 ```
-- 웨커 TV
+- Secular saints of Tableau Community
 ```
+
+
