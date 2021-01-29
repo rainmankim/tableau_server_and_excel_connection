@@ -3,7 +3,7 @@
 :smile: :grinning: :sleepy: :relieved: :confused: :open_mouth: :astonished: :thumbsup:
 
 
-# tableau_server_cloudera_data_extraction
+# tableau_server_and_offline_excel_file_connection
 
 
 ```
@@ -11,6 +11,15 @@ Creator: Ray Kim Dong Hyun
 Contact: rainmankim@gmail.com
 
 * For easier understanding, I am going to call Tableau Server "Ray's Tableau Server".
+
+In my other github repository, I have shown how you can connect Tableau Desktop with Cloudera Hadoop Server  for data source publishing & connection.
+(https://github.com/rainmankim/tableau_server_cloudera_data_extraction)
+
+
+In this reposito
+
+
+
 
 This repository will show you the following in the following order:
 - (1) Connect Tableau Desktop with Cloudera Hadoop Server
