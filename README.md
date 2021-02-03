@@ -39,7 +39,7 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 
 ### Option 2 Directly blend Offline Excel File with HR Data Extract on Ray's Tableau Server
 ---> Connect to HR Data Extract on Ray's Tableau Server.    And  also connect to offline Excel file as a "NEW Data source"   
-<img align="center" src="https://user-images.githubusercontent.com/62319355/106697696-3e93f980-661a-11eb-8b83-51b95a860537.png" alt="tableau_cloudera_connection image">
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106698186-456f3c00-661b-11eb-972d-10505f849150.png" alt="tableau_cloudera_connection image">
 
 
 
