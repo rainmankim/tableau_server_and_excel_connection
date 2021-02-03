@@ -52,8 +52,8 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 #### --> First publish offline Excel File onto Ray's Tableau Server. 
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106709772-f384e100-662f-11eb-86fe-ff3da276fe68.png" alt="publish sample excel">
 
-#### --> Using custom matching, match necessary primary key(s)
-<img align="center" src="https://user-images.githubusercontent.com/62319355/106706466-b5d18980-662a-11eb-81e0-e25e1a92ec05.png" alt="data blend">
+#### --> Using custom matching, match necessary primary key(s). This time you notice both connections are on Ray's Tableau Server
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106712541-10231800-6634-11eb-842f-b9ff7665699f.png" alt="data blend">
 
 
 1111111111111111111
