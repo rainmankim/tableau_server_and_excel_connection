@@ -19,17 +19,44 @@ for data source publishing & connection.
 (https://github.com/rainmankim/tableau_server_cloudera_data_extraction)
 
 ```
-This repository will show you the following in the following order:
-- (1) 
+Suppose you have main data source extract on Ray's Tableau Server which contains HR details about your colleagues.
+Now, you come across a secret Excel file that containts list of your colleagues who happen to be aliens
+You need to quickly match this Excel file with the data on Ray's Tableau Server to stop alien invasion.
+
+Here are four data joining-blending options.  I am going to show Option 1 through Option 4 one by one.
+
+- (Option 1) Directly JOIN  Main HR Data Extract on Ray's Tableau Server  &  Offline Excel File
+---> This fails given the sheer amount of data.
+
+- (Option 2) Directly blend Offline Excel File with HR Data Extract on Ray's Tableau Server
+
+- (Option 3) First publish offline Excel File onto Ray's Tableau Server.   Then, blend main HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
+
+- (Option 4)  First publish offline Excel File onto Ray's Tableau Server.   Then, join HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
 
 
 
-- (1) Connect Tableau Desktop with Cloudera Hadoop Server
-- (2) Extract necessary data (with custom SQL if necessary)
-- (3) Publish data source onto "Ray's Tableau Server" with emedded authetification as LIVE data source
-- (4) From "Ray's Tabealu Server", change the data from LIVE to EXTRACT  (takes a while)
-- (5) Open a new Tableau Desktop instance and connect to the publisehd data source in "Ray's Tableau Server"
-- (6-optional) Set refresch schedule for extracted data
+
+
+
+
+Option 1
+
+JJCC Excel File  +  NTS Data on Server  (join)  ----> Fail
+
+Option 2
+
+JJCC Excel File  +  NTS Data on Server  (data blend)  ----> Works
+
+Option 3
+
+JJCC Excel file published on server    + NTS data on server   (then using data blend)
+
+Benefit : Just need to update Excel data source onto Tableau Server (same file name &column name)  without touching Tableau workbook
+
+Option 4??
+
+
 ```
 
 
@@ -62,33 +89,17 @@ This repository will show you the following in the following order:
 #### Once you click "Extract", "Ray's Tableau Server" will start to extract from Cloudera Database.
 <img align="center" src="https://user-images.githubusercontent.com/62319355/105821234-910b5f80-5ff5-11eb-912c-8cfb388d7023.png" alt="Live to extract">
 
-#### You will receive an email upton extraction (at least that is how it is configured).
-#### In addition, you can monitor the extraction process in real-time as shown.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105821830-3fafa000-5ff6-11eb-897a-a0ceb4298d8e.png" alt="Live to extract">
 
 
 
-### Step 5. Once data source has been extracted on the Tableau, let us connect to the data.
-#### Now, you will experience much less loading of data as compared to live connection.
-#### You may ask "Why not just extract from the very start?"  The biggest reason is that it can throw an error when you extract at the start.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105823826-9918ce80-5ff8-11eb-8d7c-fcbd4e1f97ab.png" alt="Connect to ray DB">
-
-
-### Step 6. (Optional) You can set refresh schedule on the Extract on "Ray's Tableau Server" easily.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105824522-6e7b4580-5ff9-11eb-95fd-55e75066650d.png" alt="Refresh Extracts">
-
-
-
-🎈🦾 😎 That's it from me.  Happy Data Stitching!!
+🎈🦾 😎 That's it from me. Try not to alienate people!
 --------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 
 ## Credits
 ```
+- Credits: Mohammed Shameel  (insanely smart and resourceful)
 - Secular saints of Tableau Community
 ```
-
 
