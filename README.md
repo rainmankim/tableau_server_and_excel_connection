@@ -41,10 +41,9 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 #### --> Connect to HR Data Extract on Ray's Tableau Server.    And  also connect to offline Excel file as a "NEW Data source"   
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106698186-456f3c00-661b-11eb-972d-10505f849150.png" alt="tableau_cloudera_connection image">
 
-#### --> Next, go to "Edit Data Relationships" option as shown below                                                                                                   
-<img align="left" src="https://user-images.githubusercontent.com/62319355/106703570-70f72400-6625-11eb-87f9-c56dcf00a2e2.png" alt="data_blend_image"  width="450">  
-
-<br/>
+#### --> Next, go to "Edit Data Relationships" option as shown below                       
+#### this is a test statement
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106698186-456f3c00-661b-11eb-972d-10505f849150.png" alt="tableau_cloudera_connection image">
 
 ###33333333333333333
 222222222222
