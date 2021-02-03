@@ -45,14 +45,16 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106705361-c54fd300-6628-11eb-9bb3-1b7346f7e9a7.png" alt="tableau_cloudera_connection image">
 
 #### --> Using custom matching, match necessary primary key(s)
-<img align="center" src="https://user-images.githubusercontent.com/62319355/106706466-b5d18980-662a-11eb-81e0-e25e1a92ec05.png" alt="tableau_cloudera_connection image">
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106706466-b5d18980-662a-11eb-81e0-e25e1a92ec05.png" alt="data blend">
 
 
 ### Option 3 First publish offline Excel File onto Ray's Tableau Server.   Then, blend main HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106709772-f384e100-662f-11eb-86fe-ff3da276fe68.png" alt="publish sample excel">
 
 
-
-
+1111111111111111111
+22222222222222222222222
+333333333333
 
 
 ```
