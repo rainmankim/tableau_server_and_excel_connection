@@ -49,42 +49,24 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 
 
 ### Option 3 First publish offline Excel File onto Ray's Tableau Server.   Then, blend main HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
-#### --> First publish offline Excel File onto Ray's Tableau Server. 
+#### --> First connect to offline Excel File and publish data onto Ray's Tableau Server. 
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106709772-f384e100-662f-11eb-86fe-ff3da276fe68.png" alt="publish sample excel">
 
+#### Open a new workbook. Connect with both Main Data and newly published data. 
 #### --> Using custom matching, match necessary primary key(s). This time you notice both connections are on Ray's Tableau Server
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106712541-10231800-6634-11eb-842f-b9ff7665699f.png" alt="data blend">
 
 
-1111111111111111111
-22222222222222222222222
-333333333333 444444444444 55555555555
 
 
-```
-Option 1
-
-JJCC Excel File  +  NTS Data on Server  (join)  ----> Fail
-
-Option 2
-
-JJCC Excel File  +  NTS Data on Server  (data blend)  ----> Works
-
-Option 3
-
-JJCC Excel file published on server    + NTS data on server   (then using data blend)
-
-Benefit : Just need to update Excel data source onto Tableau Server (same file name &column name)  without touching Tableau workbook
-
-Option 4??
-
-
-```
+### Option 4  First publish offline Excel File onto Ray's Tableau Server.   Then, join HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
+#### --> This option is simply not allowed.
 
 
 
 
-🎈🦾 😎 That's it from me. Try not to alienate people!
+
+🎈🦾 😎 That's it from me. Let us never alienate anybody!
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
