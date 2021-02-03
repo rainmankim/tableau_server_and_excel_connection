@@ -82,36 +82,6 @@ Option 4??
 ```
 
 
-### Step 1.  Let's open up Tableau Desktop and connect to Cloudera Hadoop with your credentials
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105792845-10337000-5fc3-11eb-9fd8-43d35e496f13.png" alt="tableau_cloudera_connection image">
-
-### Step 2. Next, connect to Cloudera Table.  And I have written custom SQL query because the DB is too big(You can extract the DB as a whole)
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105798924-3d395000-5fce-11eb-99e2-7ab2811a9fd9.png" alt="tableau_cloudera_connection image">
-
-### Step 3. Next, we shall now publish the databse onto "Ray's Tableau Server"
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105799297-29dab480-5fcf-11eb-878d-a751ae42211c.png" alt="tableau_cloudera_connection image">
-
-
-### I recommend publishing this with "Embedded Password" setting with Live connection (because it often fails when you try to extract first)
-#### If you choose "prompt user", it will ask for your password every single time. 
-#### Alternatively, you can choose to publish as "prompt user" and you can still change to "Embedded Password" in "Ray's Tableau Server".
-#### I will show you in step 4
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105804723-788e4b80-5fdb-11eb-89b2-135c378efbd0.png">
-
-
-### Step 4A. Now let us go to "Ray's Tableau Server".  
-#### Search for the published data soruce. 
-#### If you had published as "Prompt User", you can change to "Embedded Password" authetification instead.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105806935-e3418600-5fdf-11eb-9379-6b47a65da4e5.png" alt="tableau_edit_connection"
-
-
-### Step 4B.  Change the data connection from LIVE to EXTRACT  (takes a while)
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105820676-d4b19980-5ff4-11eb-9b60-ce1b78c4d3dc.png" alt="Live to extract">
-
-#### Once you click "Extract", "Ray's Tableau Server" will start to extract from Cloudera Database.
-<img align="center" src="https://user-images.githubusercontent.com/62319355/105821234-910b5f80-5ff5-11eb-912c-8cfb388d7023.png" alt="Live to extract">
-
-
 
 
 🎈🦾 😎 That's it from me. Try not to alienate people!
