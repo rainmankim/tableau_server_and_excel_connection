@@ -44,6 +44,9 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 #### --> Next, go to "Edit Data Relationships" option as shown below                       
 <img align="center" src="https://user-images.githubusercontent.com/62319355/106705361-c54fd300-6628-11eb-9bb3-1b7346f7e9a7.png" alt="tableau_cloudera_connection image">
 
+#### --> Using custom matching, match necessary primary key(s)
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106706466-b5d18980-662a-11eb-81e0-e25e1a92ec05.png" alt="tableau_cloudera_connection image">
+
 
 33333333333333333
 222222222222
