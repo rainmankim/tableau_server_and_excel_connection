@@ -32,7 +32,7 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 - (Option 3) First publish offline Excel File onto Ray's Tableau Server.   Then, blend main HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
 
 - (Option 4)  First publish offline Excel File onto Ray's Tableau Server.   Then, join HR Data Extract on Ray's Tableau Server  & Alien Data on Ray's Tableau Server
-'''
+```
 
 ### Option 1
 ---> This fails given the sheer amount of data.
@@ -40,7 +40,7 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 
 
 
-'''
+```
 Option 1
 
 JJCC Excel File  +  NTS Data on Server  (join)  ----> Fail
