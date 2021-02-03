@@ -43,9 +43,10 @@ Here are four data joining-blending options.  I am going to show Option 1 throug
 
 #### --> Next, go to "Edit Data Relationships" option as shown below                       
 #### this is a test statement
-<img align="center" src="https://user-images.githubusercontent.com/62319355/106698186-456f3c00-661b-11eb-972d-10505f849150.png" alt="tableau_cloudera_connection image">
+<img align="center" src="https://user-images.githubusercontent.com/62319355/106705361-c54fd300-6628-11eb-9bb3-1b7346f7e9a7.png" alt="tableau_cloudera_connection image">
 
-###33333333333333333
+
+33333333333333333
 222222222222
 123123123
 123123123
